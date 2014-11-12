@@ -1,0 +1,22 @@
+{
+  "name": "dbtest",
+  "version": "0.0.1",
+  "description": "db test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BaBuDe/dbTest.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "express": "^4.10.1",
+    "gulp": "^3.8.8",
+    "mocha": "^1.21.4",
+    "mysql": "^2.5.3",
+    "pg": "^3.6.3",
+    "sequelize": "^2.0.0-rc2"
+  }
+}
