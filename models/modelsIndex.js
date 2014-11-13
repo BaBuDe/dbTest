@@ -19,7 +19,7 @@ if (!global.hasOwnProperty('db')) {
   global.db = {
     Sequelize: Sequelize,
     sequelize: sequelize,
-    CD: sequelize.import(__dirname + '/cd');
+    CD: sequelize.import(__dirname + '/cd')
   }
 
 };
