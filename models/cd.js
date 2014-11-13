@@ -1,5 +1,8 @@
-var CD = sequelize.define('CD', {
+// var sequelize = require('sequelize');
+// var Sequelize = sequelize;
+
+var cd = sequelize.define('cd', {
     cd_name: Sequelize.STRING
 });
 
-modules.export.CD = CD;
+// modules.export.cd = cd;
