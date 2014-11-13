@@ -2,16 +2,15 @@ var express = require('express');
 var pg = require('pg');
 var app = express();
 var bodyParser = require('body-parser');
-var db = require('/models');
+var db = require('models');
 var path = require('path');
 var routes = require('/routes');
-// var connectionString = 'postgres://qqpxuatnftvyqz:ZfsEjCpkpGtLgwQ5fE1a1AyCCp@ec2-54-163-249-168.compute-1.amazonaws.com:5432/d4uj91gp54rn5k';
 var client = new pg.Client({
-    user: "warshguitsgtjr",
-    password: "iVBdRJrQ-syQ5xW1WbasAxW0s_",
-    database: "d85ejkgqeeomij",
+    user: "navzazhiolexqn",
+    password: "mJAmrmCj6t3vfvtJqKkmlUP9-W",
+    database: "d563p91di2mbts",
     port: 5432,
-    host: "ec2-107-20-191-205.compute-1.amazonaws.com",
+    host: "ec2-54-204-43-138.compute-1.amazonaws.com",
     ssl: true
 }); 
 
