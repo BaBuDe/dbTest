@@ -28,7 +28,6 @@ app.listen(app.get('port'), function () {
 app.get('/', function(req, res) {
   res.sendFile('/public/index.html');
 });
-app.get('/cds', cd.cd_name);
 
 db.sequelize.sync().complete(function(err) {
   if (err) {
