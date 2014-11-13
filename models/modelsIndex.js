@@ -17,7 +17,7 @@
     ];
 
     models.forEach(function(model) {
-      module.exports[model] = sequelize.import('./' + model);
+      module.exports[model] = sequelize.import('/' + model);
     });
 
   // };
