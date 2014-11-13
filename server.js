@@ -29,7 +29,7 @@ app.get('/', function(req, res) {
   res.sendFile('/public/index.html');
 });
 
-db.sequelize.sync().complete(function(err) {
+db.sequelize.sync({force: true}).complete(function(err) {
   if (err) {
     throw err[0]
   } else {

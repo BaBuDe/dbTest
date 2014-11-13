@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define("cd", {
-    cd_name: DataTypes.STRING
+    cd_name: Sequelize.STRING
     });
 };

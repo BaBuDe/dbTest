@@ -10,7 +10,7 @@ if (!global.hasOwnProperty('db')) {
       protocol: 'postgres',
       port: match[4],
       host: match[3],
-      logging: true
+      // logging: true
     });
   } else {
     sequelize = new Sequelize('local-sample', 'root', null)
