@@ -3,8 +3,8 @@ var pg = require('pg');
 var app = express();
 var bodyParser = require('body-parser');
 var db = require('./models');
-var path = require('path');
-var routes = require('/routes');
+// var path = require('path');
+// var routes = require('/routes');
 var client = new pg.Client({
     user: "navzazhiolexqn",
     password: "mJAmrmCj6t3vfvtJqKkmlUP9-W",
