@@ -16,10 +16,6 @@ var client = new pg.Client({
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-if ('development' === app.get('env')) {
-  app.use(express.errorHandler())
-};
-
 app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/public')); //Serve static files
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
