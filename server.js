@@ -2,7 +2,8 @@ var express = require('express');
 var pg = require('pg');
 var app = express();
 var bodyParser = require('body-parser');
-var db = require('./models/modelsIndex');
+var models = require('./models');
+var CD1 = models.CD;
 // var path = require('path');
 // var routes = require('/routes');
 var client = new pg.Client({
@@ -29,20 +30,14 @@ app.get('/', function(req, res) {
   res.sendFile('/public/index.html');
 });
 
-db.sequelize.sync({force: true}).complete(function(err) {
+sequelize.sync({force: true}).complete(function(err) {
   if (err) {
     throw err[0]
   } else {
     http.createServer(app).listen(app.get('port'), function () {
       console.log('Express working and listening');
+      console.log(CD1);
     });
-  }
+  };
 });
-
-// client.connect();
-// var query = client.query('SELECT * FROM composers');
-
-//   query.on('row', function(row) {
-//     console.log(JSON.stringify(row));
-//   });
 

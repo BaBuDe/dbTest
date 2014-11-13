@@ -1,5 +1,3 @@
-module.exports = function(sequelize, DataTypes) {
-  return sequelize.define("cd", {
+var CD = sequelize.define('CD', {
     cd_name: Sequelize.STRING
-    });
-};
+});
