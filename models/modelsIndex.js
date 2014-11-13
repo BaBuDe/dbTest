@@ -13,7 +13,7 @@
     });
 
     var models = [
-    'CD'
+    'cd'
     ];
 
     models.forEach(function(model) {
