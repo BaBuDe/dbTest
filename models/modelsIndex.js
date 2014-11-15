@@ -19,18 +19,17 @@ if (!global.hasOwnProperty('db')) {
   global.db = {
     Sequelize: Sequelize,
     sequelize: sequelize,
-    cd: sequelize.import(__dirname + '/' + cd),
-    composition: sequelize.import(__dirname + '/' + composition),
-    labelCode: sequelize.import(__dirname + '/' + labelCode),
-    label: sequelize.import(__dirname + '/' + label),
-    catalog: sequelize.import(__dirname + '/' + catalog),
-    movement: sequelize.import(__dirname + '/' + movement),
-    performance: sequelize.import(__dirname + '/' + performance),
-    person: sequelize.import(__dirname + '/' + person),
-    recording: sequelize.import(__dirname + '/' + recording),
-    soloist: sequelize.import(__dirname + '/' + soloist),
-    track: sequelize.import(__dirname + '/' + track),
-
+    cd: sequelize.import(__dirname + '/cd'),
+    composition: sequelize.import(__dirname + '/composition'),
+    labelCode: sequelize.import(__dirname + '/labelCode'),
+    label: sequelize.import(__dirname + '/label'),
+    catalog: sequelize.import(__dirname + '/catalog'),
+    movement: sequelize.import(__dirname + '/movement'),
+    performance: sequelize.import(__dirname + '/performance'),
+    person: sequelize.import(__dirname + '/person'),
+    recording: sequelize.import(__dirname + '/recording'),
+    soloist: sequelize.import(__dirname + '/soloist'),
+    track: sequelize.import(__dirname + '/track')
   };
 
   global.db.track.hasMany(global.db.cd);
