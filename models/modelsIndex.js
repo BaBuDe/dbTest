@@ -68,9 +68,6 @@ if (!global.hasOwnProperty('db')) {
   global.db.person.hasOne(global.db.composition, {foreignKey: 'composition_composer'});
   global.db.composition.belongsTo(global.db.person, {foreignKey: 'composition_composer'});
 
-  global.db.composition.hasOne(global.db.movement);
-  global.db.movement.belongsTo(global.db.composition);
-
   global.db.movement.hasMany(global.db.composition);
   global.db.composition.belongsTo(global.db.movement);
 
