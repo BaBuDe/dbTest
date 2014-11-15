@@ -1,8 +1,13 @@
-// var sequelize = require('sequelize');
-// var Sequelize = sequelize;
-
-var cd = sequelize.define('cd', {
-    cd_name: Sequelize.STRING
-});
-
-// modules.export.cd = cd;
+module.exports = function(sequelize, DataTypes) {
+  var cd = sequelize.define('cd', {
+    cd_name: DataTypes.STRING,
+    cd_release_date: DataTypes.STRING,
+    cd_country: DataTypes.STRING,
+    cd_total_discs: DataTypes.STRING,
+    cd_total_tracks: DataTypes.STRING,
+    cd_cover_image: DataTypes.STRING,
+    cd_booklet: DataTypes.STRING,
+    cd_booklet_text: DataTypes.STRING,
+  }, {underscored: true});
+  return cd;
+};

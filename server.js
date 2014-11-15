@@ -2,8 +2,6 @@ var express = require('express');
 var pg = require('pg');
 var app = express();
 var bodyParser = require('body-parser');
-var models = require('./models/modelsIndex');
-var CD1 = models.cd;
 // var path = require('path');
 // var routes = require('/routes');
 var client = new pg.Client({
@@ -21,22 +19,22 @@ app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/public')); //Serve static files
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
+app.set('db', require('./models'));
 
-app.listen(app.get('port'), function () {
-  console.log('listening!');
-});
+// app.listen(app.get('port'), function () {
+//   console.log('listening!');
+// });
 
 app.get('/', function(req, res) {
   res.sendFile('/public/index.html');
 });
 
-sequelize.sync({force: true}).complete(function(err) {
+db.sequelize.sync({force: true}).complete(function(err) {
   if (err) {
     throw err[0]
   } else {
     http.createServer(app).listen(app.get('port'), function () {
       console.log('Express working and listening');
-      console.log(CD1);
     });
   };
 });
