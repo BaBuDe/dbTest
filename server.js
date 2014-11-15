@@ -19,7 +19,7 @@ app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/public')); //Serve static files
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
-app.set('db', require('./models'));
+app.set('db', require('./models/modelsIndex'));
 
 // app.listen(app.get('port'), function () {
 //   console.log('listening!');
